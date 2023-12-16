@@ -15,28 +15,22 @@ class MyApp extends StatelessWidget{
   }
   
 }
+
 class HomeScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
    return Scaffold(
      backgroundColor: Colors.amberAccent ,
-     body: Center(
-       child: Text(
-         'Hello Niloy',
-         textAlign: TextAlign.center,
-         style: TextStyle(
-           color: Colors.white,
-           fontSize: 60,
-           fontWeight: FontWeight.w800,
-           backgroundColor: Colors.grey,
-           decoration: TextDecoration.underline ,
-           wordSpacing: 10,
-           letterSpacing: 23,
-           overflow: TextOverflow.ellipsis,
-         ),
-       ),
-     ),
+    appBar: AppBar(
+      leading: Icon(Icons.home,size: 50,color:Colors.green,),
+      title: Text('Home', style: TextStyle(
+        fontSize: 30,
+        color: Colors.green,
+      ),),
+      backgroundColor: Colors.black,
+      elevation: 40,//elevartion means height
+    ),
    );
   }
-  
+
 }
