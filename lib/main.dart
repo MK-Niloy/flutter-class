@@ -21,14 +21,16 @@ class HomeScreen extends StatelessWidget{
   Widget build(BuildContext context) {
    return Scaffold(
      backgroundColor: Colors.amberAccent ,
-    appBar: AppBar(
-      leading: Icon(Icons.home,size: 50,color:Colors.green,),
-      title: Text('Home', style: TextStyle(
-        fontSize: 30,
-        color: Colors.green,
-      ),),
-      backgroundColor: Colors.black,
-      elevation: 40,//elevartion means height
+    body: Center(
+     // child: Image.network(
+       // 'https://mdbootstrap.com/docs/standard/plugins/dummy/dummy.jpg'),
+      child: Image.asset('images/photo.jpeg',
+        height: 400,
+        width: 400,
+        fit: BoxFit.fitWidth,
+          //repeat: ImageRepeat.repeat,
+
+      ),
     ),
    );
   }
