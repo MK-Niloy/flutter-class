@@ -28,18 +28,21 @@ class HomeScreen extends StatelessWidget{
         backgroundColor: Colors.black,
       ),
       backgroundColor: Colors.blue,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //mainAxisSize: MainAxisSize.min,
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+       // mainAxisSize: MainAxisSize.min,
        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text('data' ,style: TextStyle(
             color: Colors.amber,
             fontSize: 32,
           ),),
-          Text('data'),
-          Text('data'),
-          Text('data'),
+          Text(' data'),
+          Text(' data',style: TextStyle(
+            color: Colors.amber,
+            fontSize: 32,
+          ),),
+          Text(' data'),
         ],
       ),
     );
