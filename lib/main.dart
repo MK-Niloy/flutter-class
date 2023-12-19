@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget{
           Text(' data'),
           Text(' data',style: TextStyle(
             color: Colors.amber,
-            fontSize: 32,
+            fontSize: 35,
           ),),
           Text(' data'),
         ],
