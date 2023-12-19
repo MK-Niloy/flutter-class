@@ -47,7 +47,15 @@ class HomeScrene extends StatelessWidget{
 
          ),
          ElevatedButton(onPressed: (){
-           showAboutDialog(context: context);//Apps about Dialog
+            showDialog(context: context, builder: (context){
+              return AlertDialog(
+                title: Text('Message'),
+                content: Text('Welcome back'),
+                actions: [
+                  ElevatedButton(onPressed: (){}, child: Text('Cancel'),),
+                ],
+              );
+            });
          },
              child: Text('To Do'))
         ],
