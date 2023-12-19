@@ -25,9 +25,11 @@ class HomeScrene extends StatelessWidget{
        ),),
        backgroundColor: Colors.black,
      ),
+
      body: Column(
+
        mainAxisSize: MainAxisSize.max,
-       mainAxisAlignment: MainAxisAlignment.spaceAround,
+       mainAxisAlignment: MainAxisAlignment.center,
        crossAxisAlignment: CrossAxisAlignment.center,
        children: [
          Text('Data'),
@@ -42,8 +44,13 @@ class HomeScrene extends StatelessWidget{
              Text('Data'),
              Text('Data'),
            ],
-         )
-       ],
+
+         ),
+         ElevatedButton(onPressed: (){
+           showAboutDialog(context: context);//Apps about Dialog
+         },
+             child: Text('To Do'))
+        ],
      ),
    );
   }
