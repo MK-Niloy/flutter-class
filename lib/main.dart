@@ -1,51 +1,51 @@
 import 'package:flutter/material.dart';
-void main() {
+void main(){
   runApp(MyApp());
-
 }
-
 class MyApp extends StatelessWidget{
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
-      home:HomeScreen(),
+        home:HomeScrene(),
     );
-    //TODO: implement build
+    // TODO: implement build
+    throw UnimplementedError();
   }
 }
-
-class HomeScreen extends StatelessWidget{
+class HomeScrene extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.flutter_dash, size: 32, color: Colors.amber,),
-        title: Text('Flutter' ,style: TextStyle(
-            fontSize: 32,
-          color: Colors.amber,
-
-        ),),
-        backgroundColor: Colors.black,
-      ),
-      backgroundColor: Colors.blue,
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-       // mainAxisSize: MainAxisSize.min,
-       // crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text('data' ,style: TextStyle(
-            color: Colors.amber,
-            fontSize: 32,
-          ),),
-          Text(' data'),
-          Text(' data',style: TextStyle(
-            color: Colors.amber,
-            fontSize: 35,
-          ),),
-          Text(' data'),
-        ],
-      ),
-    );
+   return Scaffold(
+     backgroundColor: Colors.blue,
+     appBar: AppBar(
+       leading: Icon(Icons.flutter_dash_outlined ,color: Colors.amber, size: 32,),
+       title:Text('Flutter', style: TextStyle(
+         fontSize: 32,
+         color: Colors.amber,
+       ),),
+       backgroundColor: Colors.black,
+     ),
+     body: Column(
+       mainAxisSize: MainAxisSize.max,
+       mainAxisAlignment: MainAxisAlignment.spaceAround,
+       crossAxisAlignment: CrossAxisAlignment.center,
+       children: [
+         Text('Data'),
+         Text('Data'),
+         Text('Data'),
+         Text('Data'),
+         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+             Text('Data'),
+             Text('Data'),
+             Text('Data'),
+             Text('Data'),
+           ],
+         )
+       ],
+     ),
+   );
   }
 
 }
