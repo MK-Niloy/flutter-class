@@ -26,19 +26,30 @@ class HomeScrene extends StatelessWidget{
        ),
      ),
      body:Center(
-       child: Column(
-         children: [
-             TextField(
-               decoration: InputDecoration(
-                  hintText: 'Enter your Name',
-                   label:Text('Name'),
-
+         child: RichText(text: TextSpan(
+            text: 'Hello',style: TextStyle(
+           color: Colors.amber,
+           fontSize: 20,
+         ),
+             children:[
+               TextSpan(
+                   text: ' Niloy',style: TextStyle(
+                 color: Colors.blue,
+                 fontSize: 32,
+               )
                ),
-             ),
-         ],
-       ),
+               TextSpan(
+                   text: ' Welcome',style: TextStyle(
+                 color: Colors.green,
+                 fontSize: 50,
+               )
+               ),
+             ]
+          ),
 
-     )
+
+         ),
+     ),
 
    );
   }
