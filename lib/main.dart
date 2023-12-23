@@ -28,56 +28,42 @@ class HomeScrene extends StatelessWidget{
      body:Center(
        child: Column(
          children: [
-             TextField(
-               obscureText: true,//password type likha
-               controller: searchTextFieldController,
-               onTap: (){
-                 print('Skjkj');
-               },
-               onChanged: (String input){
-                 print(input);
-               },
-              // keyboardType: TextInputType.phone,
-               textInputAction: TextInputAction.done,
-               onSubmitted: (String value){
-                 print(searchTextFieldController.text);
-                 searchTextFieldController.clear();
-               },
-               decoration: InputDecoration(
-                 //enabled: false,
-                  hintText: 'Enter your Name',
-                  label:Text('Name'),
-                 border: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.amber,
-                      width: 15,
-                      style: BorderStyle.solid,
-                    ),
-                 ),
-                 enabledBorder: OutlineInputBorder(
-                   borderSide: BorderSide(
-                     color: Colors.amber,
-                     width: 15,
-                     style: BorderStyle.solid,
-                   ),
-                 ),
-                 disabledBorder: OutlineInputBorder(
-                   borderSide: BorderSide(
-                     color: Colors.red,
-                     width: 3,
-                     style: BorderStyle.solid,
-                   ),
-                 ),
-                 focusedBorder: OutlineInputBorder(
-                   borderSide: BorderSide(
-                     color: Colors.green,
-                     width: 5,
-                     style: BorderStyle.solid,
-                   ),
-                 ),
-
+           Container(
+             height: 300,
+             width: 450,
+            // margin: EdgeInsets.all(20), all site
+             //margin: EdgeInsets.only(left: 10,right: 30,bottom: 40,top: 15),
+             margin: EdgeInsets.symmetric(horizontal: 20,vertical: 14),
+             //padding: EdgeInsets.all(13), mane votir dike place newa
+             //padding: EdgeInsets.only(left: 10,right: 30,bottom: 40,top: 15),
+             padding: EdgeInsets.symmetric(horizontal: 20,vertical: 14),
+             //color: Colors.amber,
+             child: Text('Niloy'),
+             alignment: Alignment.center,
+             decoration: BoxDecoration(
+               color:Colors.green,
+              // borderRadius: BorderRadius.circular(30),
+               borderRadius: BorderRadius.only(
+                 topLeft: Radius.circular(10),
+                 topRight: Radius.circular(30),
+                 bottomLeft: Radius.circular(15),
                ),
+               border: Border.all(
+                 color: Colors.amber,
+                 width: 10,
+                 style: BorderStyle.solid,
+               ),
+               //shape: BoxShape.circle, border radius use korle shape use kora jabe nah
+               boxShadow: [
+                 BoxShadow(
+                   color: Colors.black87,
+                   blurRadius: 7,
+                   offset: Offset (5,6),
+                 )
+
+               ]
              ),
+           )
          ],
        ),
 
