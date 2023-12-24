@@ -13,7 +13,14 @@ class MyApp extends StatelessWidget{
   }
 }
 class HomeScrene extends StatelessWidget{
-  TextEditingController searchTextFieldController=TextEditingController();
+  void mySnackBar(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
    return Scaffold(
@@ -25,32 +32,13 @@ class HomeScrene extends StatelessWidget{
         ),
        ),
      ),
-     body:Center(
-       child: Column(
-         children: [
-
-           InkWell(
-             onTap: (){
-               print('This fast tap');
-             },
-             splashColor: Colors.amber,
-             highlightColor: Colors.green,
-             child: Text('Niloy', style: TextStyle(
-               fontSize: 34,
-             ),),
-             
-           ),
-           GestureDetector(
-             onTap: (){
-               print('Niloy');
-             },
-           ),
-         ],
-       ),
-
-     )
-
+     body:ListView(
+       children: [
+        ListTile(leading: Icon(Icons.star), title: Text('Item 1'), onTap: (){mySnackBar(context, "item 1");}),
+        ListTile(leading: Icon(Icons.star), title: Text('Item 2'), onTap: (){mySnackBar(context, "item 2");}),
+        ListTile(leading: Icon(Icons.star), title: Text('Item 3'), onTap: (){mySnackBar(context, "item 3");}),
+       ],
+     ),
    );
   }
-
 }
