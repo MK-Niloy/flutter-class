@@ -44,6 +44,8 @@ class HomeScrene extends StatelessWidget{
                  searchTextFieldController.clear();
                },
                decoration: InputDecoration(
+                 prefixIcon: Icon(Icons.add),
+                 suffixIcon: Icon(Icons.remove_red_eye),
                  //enabled: false,
                   hintText: 'Enter your Name',
                   label:Text('Name'),
