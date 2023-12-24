@@ -28,58 +28,23 @@ class HomeScrene extends StatelessWidget{
      body:Center(
        child: Column(
          children: [
-             TextField(
-               obscureText: true,//password type likha
-               controller: searchTextFieldController,
-               onTap: (){
-                 print('Skjkj');
-               },
-               onChanged: (String input){
-                 print(input);
-               },
-              // keyboardType: TextInputType.phone,
-               textInputAction: TextInputAction.done,
-               onSubmitted: (String value){
-                 print(searchTextFieldController.text);
-                 searchTextFieldController.clear();
-               },
-               decoration: InputDecoration(
-                 prefixIcon: Icon(Icons.add),
-                 suffixIcon: Icon(Icons.remove_red_eye),
-                 //enabled: false,
-                  hintText: 'Enter your Name',
-                  label:Text('Name'),
-                 border: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.amber,
-                      width: 15,
-                      style: BorderStyle.solid,
-                    ),
-                 ),
-                 enabledBorder: OutlineInputBorder(
-                   borderSide: BorderSide(
-                     color: Colors.amber,
-                     width: 15,
-                     style: BorderStyle.solid,
-                   ),
-                 ),
-                 disabledBorder: OutlineInputBorder(
-                   borderSide: BorderSide(
-                     color: Colors.red,
-                     width: 3,
-                     style: BorderStyle.solid,
-                   ),
-                 ),
-                 focusedBorder: OutlineInputBorder(
-                   borderSide: BorderSide(
-                     color: Colors.green,
-                     width: 5,
-                     style: BorderStyle.solid,
-                   ),
-                 ),
 
-               ),
-             ),
+           InkWell(
+             onTap: (){
+               print('This fast tap');
+             },
+             splashColor: Colors.amber,
+             highlightColor: Colors.green,
+             child: Text('Niloy', style: TextStyle(
+               fontSize: 34,
+             ),),
+             
+           ),
+           GestureDetector(
+             onTap: (){
+               print('Niloy');
+             },
+           ),
          ],
        ),
 
