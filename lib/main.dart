@@ -20,25 +20,45 @@ class HomeScrene extends StatelessWidget{
       ),
     );
   }
+  var myItems = [
+    {"name": "Niloy", "city": "Dhaka", "age": "23"},
+    {"name": "John", "city": "New York", "age": "30"},
+    {"name": "Alice", "city": "London", "age": "25"},
+    {"name": "Bob", "city": "Paris", "age": "28"},
+    {"name": "Eva", "city": "Berlin", "age": "22"},
+    {"name": "David", "city": "Tokyo", "age": "35"},
+    {"name": "Sara", "city": "Sydney", "age": "29"},
+    {"name": "Michael", "city": "Los Angeles", "age": "32"},
+    {"name": "Sophie", "city": "Toronto", "age": "26"},
+    {"name": "Chris", "city": "Chicago", "age": "27"},
+  ];
+
 
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
-     appBar: AppBar(
-       backgroundColor: Colors.blue,
-       title: Text('Home', style: TextStyle(
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text('Home', style: TextStyle(
           color: Colors.amber,
-         fontSize: 32,
+          fontSize: 32,
         ),
-       ),
-     ),
-     body:ListView(
-       children: [
-        ListTile(leading: Icon(Icons.star), title: Text('Item 1'), onTap: (){mySnackBar(context, "item 1");}),
-        ListTile(leading: Icon(Icons.star), title: Text('Item 2'), onTap: (){mySnackBar(context, "item 2");}),
-        ListTile(leading: Icon(Icons.star), title: Text('Item 3'), onTap: (){mySnackBar(context, "item 3");}),
-       ],
-     ),
-   );
+        ),
+      ),
+      body:ListView.builder(
+        itemCount: myItems.length,
+        itemBuilder: (context,index){
+          return ListTile(
+            leading: Icon(Icons.star),
+            title: Text(myItems[index]['name']!),
+            subtitle:Text(myItems[index]['city']!),
+            onTap: (){
+              mySnackBar(context, myItems[index]['age']!);},
+          );
+        }
+      )
+      );
+
+
   }
 }
