@@ -59,12 +59,14 @@ class HomeScrene extends StatelessWidget{
       body:ListView.builder(
         itemCount: myItems.length,
         itemBuilder: (context,index){
-          return ListTile(
-            leading: Icon(Icons.star),
-            title: Text(myItems[index]['name']!),
-            subtitle:Text(myItems[index]['city']!),
-            onTap: (){
+          return InkWell(//inkwell
+            onDoubleTap: (){
               mySnackBar(context, myItems[index]['age']!);},
+            child: ListTile(
+              leading: Icon(Icons.star),
+              title: Text(myItems[index]['name']!),
+              subtitle:Text(myItems[index]['city']!),
+            ),
           );
         }
       )
