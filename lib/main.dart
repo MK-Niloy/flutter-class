@@ -55,19 +55,17 @@ class HomeScrene extends StatelessWidget{
         ),
         ),
       ),
-      backgroundColor: Colors.greenAccent,
-      body:ListView.builder(
+     // backgroundColor: Colors.greenAccent,
+      body:GridView.builder(
+       // scrollDirection:Axis.vertical,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 2),
         itemCount: myItems.length,
         itemBuilder: (context,index){
-          return InkWell(//inkwell
-            onDoubleTap: (){
-              mySnackBar(context, myItems[index]['age']!);},
-            child: ListTile(
+          return ListTile(
               leading: Icon(Icons.star),
               title: Text(myItems[index]['name']!),
               subtitle:Text(myItems[index]['city']!),
-            ),
-          );
+            );
         }
       )
       );
